@@ -22,7 +22,15 @@ cursor = conexao.cursor()
 # cursor.execute('INSERT INTO Emprestimos(id_usuario,data_emprestimo,data_devolucao,Estado_do_Exemplar) VALUES(1,"2023-15-12","2024-06-02","Atraso")')
 # cursor.execute('INSERT INTO Emprestimos(id_usuario,data_emprestimo,data_devolucao,Estado_do_Exemplar) VALUES(10,"2024-05-02","2024-06-02","Emprestado")')
 
-cursor.execute('ALTER TABLE Emprestimos ADD COLUMN título VARCHAR(60)')
+# cursor.execute('ALTER TABLE Emprestimos ADD COLUMN título VARCHAR(60)')
+
+# cursor.execute('UPDATE Emprestimos SET título="O diário de Anne Frank" Where id="1"')
+# cursor.execute('UPDATE Emprestimos SET título="Pequeno manual Antirracista" Where id="2"')
+# cursor.execute('UPDATE Emprestimos SET título="Crime e Castigo" Where id="3"')
+# cursor.execute('UPDATE Emprestimos SET título="Dom Casmurro" Where id="4"')
+# cursor.execute('UPDATE Emprestimos SET título="De Ira" Where id="5"')
+
+
 
 conexao.commit() #envia as informações
 

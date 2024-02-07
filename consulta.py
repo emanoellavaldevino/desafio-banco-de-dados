@@ -12,9 +12,10 @@ cursor = conexao.cursor()
 
 # Encontrar todos os livros emprestados no momento
 
-dados2 = cursor.execute('SELECT * FROM Emprestimos WHERE Estado_do_Exemplar= "Emprestado"')
-for livros in dados2:
-     print(livros)
+# dados2 = cursor.execute('SELECT * FROM Emprestimos WHERE Estado_do_Exemplar= "Emprestado"')
+# for livros in dados2:
+#      print(livros)
+
 # dados = cursor.execute('SELECT * FROM Emprestimos GROUP BY Estado_do_Exemplar HAVING Estado_do_Exemplar="Emprestado" ')
 # for livros in dados:
 #     print(livros)
@@ -29,9 +30,11 @@ for livros in dados2:
 # for livros in dados1:
 #     print(livros)
 # Mostrar os empréstimos em atraso.
-# cursor.execute('SELECT livros.título, usuários.nome,empréstimos.data_de_empréstimo, empréstimos.data_de_devolução,\
-#                 FROM emprestimos\
-#                 INNER JOIN empréstimos ON livros.id_do_livro = empréstimos.id_do_livro')
+
+# dados3 = cursor.execute('SELECT título FROM Emprestimos WHERE Estado_do_Exemplar="Atraso"')
+# for livro in dados3:
+#     print(livro)
+
 # delete remover um autor
 # cursor.execute('DELETE  FROM Livros WHERE autor ="Clarice Lispector"')
 # remover um livro
@@ -39,9 +42,10 @@ for livros in dados2:
 # cursor.execute('DELETE FROM livros WHERE título="O menino azul"')
 # marcar um livro como devolvido
 
-# cursor.execute('UPDATE Livros SET Estado_do_Exemplar = "devolvido" WHERE título=""')
+# dados4 = cursor.execute('SELECT título FROM Emprestimos WHERE Estado_do_Exemplar="Devolvido"')
+# for livro in dados4:
+#     print(livro)
 
-# cursor.execute('UPDATE Livros SET Exemplares_disponiveis = Exemplares_disponiveis - 1 WHERE titulo="SENHOR DOS ANEIS"')
 
 conexao.commit()
 conexao.close()
