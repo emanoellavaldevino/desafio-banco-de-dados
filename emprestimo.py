@@ -22,7 +22,7 @@ cursor = conexao.cursor()
 # cursor.execute('INSERT INTO Emprestimos(id_usuario,data_emprestimo,data_devolucao,Estado_do_Exemplar) VALUES(1,"2023-15-12","2024-06-02","Atraso")')
 # cursor.execute('INSERT INTO Emprestimos(id_usuario,data_emprestimo,data_devolucao,Estado_do_Exemplar) VALUES(10,"2024-05-02","2024-06-02","Emprestado")')
 
-
+cursor.execute('ALTER TABLE Emprestimos ADD COLUMN título VARCHAR(60)')
 
 conexao.commit() #envia as informações
 
