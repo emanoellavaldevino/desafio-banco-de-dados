@@ -12,8 +12,9 @@ cursor = conexao.cursor()
 
 # Encontrar todos os livros emprestados no momento
 
-dados = cursor.execute('SELECT Estado_do_Exemplar FROM Emprestimos WHERE Estado_do_Exemplar = "emprestado"')
-print(dados)
+# dados = cursor.execute('SELECT * FROM Emprestimos GROUP BY Estado_do_Exemplar HAVING Estado_do_Exemplar="Emprestado" ')
+# for livros in dados:
+#     print(livros)
 
 # Localizar os livros escritos por um autor específico
 # cursor.execute('SELECT * FROM Livros WHERE autor= "nome do autor"')
